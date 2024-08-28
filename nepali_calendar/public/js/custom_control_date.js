@@ -100,6 +100,15 @@ frappe.ui.form.ControlDate = class CustomControlDate extends frappe.ui.form.Cont
         }
         this._printDateConversion();
     }
+    update_datepicker_position() {
+        if(this.datepicker_bs){
+            this.datepicker = this.$input.data("datepicker");
+            this.datepicker.hide();
+            // this._toggleDatepicker();
+            return;
+        }
+        super.update_datepicker_position();
+    }
     bind_events() {
         this.$wrapper.on('click', '.nd_switch_btn', (ev) => {
                 event.preventDefault();

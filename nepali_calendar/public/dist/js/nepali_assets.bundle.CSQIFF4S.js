@@ -5643,6 +5643,14 @@
       }
       this._printDateConversion();
     }
+    update_datepicker_position() {
+      if (this.datepicker_bs) {
+        this.datepicker = this.$input.data("datepicker");
+        this.datepicker.hide();
+        return;
+      }
+      super.update_datepicker_position();
+    }
     bind_events() {
       this.$wrapper.on("click", ".nd_switch_btn", (ev) => {
         event.preventDefault();
@@ -6094,4 +6102,4 @@ See the Apache Version 2.0 License for specific language governing permissions
 and limitations under the License.
 ***************************************************************************** */
 /*! Sortable 1.15.0 - MIT | git://github.com/SortableJS/Sortable.git */
-//# sourceMappingURL=nepali_assets.bundle.IZ6W2VUE.js.map
+//# sourceMappingURL=nepali_assets.bundle.CSQIFF4S.js.map
