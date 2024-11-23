@@ -68,7 +68,7 @@ frappe.ui.form.ControlDate = class CustomControlDate extends frappe.ui.form.Cont
             console.log("Your jQuery function is defined");
         }
         $(this.$npInput).nepaliDatePicker({
-            dateFormat: "%D, %M %d, %y",
+            dateFormat: NPFORMATE_VALUES[BS_DATE_FORMAT],
             yearStart: 2000,
             yearEnd: 2090,
             closeOnDateSelect: true
@@ -253,7 +253,7 @@ frappe.ui.form.ControlDatetime = class CustomControlDateDate extends frappe.ui.f
             console.log("Your jQuery function is defined");
         }
         $(this.$npInput).nepaliDatePicker({
-            dateFormat: "%D, %M %d, %y",
+            dateFormat: NPFORMATE_VALUES[BS_DATE_FORMAT],
             yearStart: 2000,
             yearEnd: 2090,
             closeOnDateSelect: true
