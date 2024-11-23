@@ -25,7 +25,7 @@ function FormatFormDate(value) {
 
     if (!formatted) { return formatted; }
     const date = frappe.datetime.str_to_obj(value);
-    if(moment(date).year() > 2090){
+    if(moment(date).year() > 2033 || moment(date).year() < 1944){
         return formatted;
     }
     let naplidate = new NepaliDate(new Date(date));
@@ -40,7 +40,7 @@ function FormatFormDatetime(value) {
     if (!formatted) { return formatted; }
 
     const date = frappe.datetime.str_to_obj(value);
-    if(moment(date).year() > 2090){
+    if(moment(date).year() > 2033 || moment(date).year() < 1944){
         return formatted;
     }
     let naplidate = new NepaliDate(new Date(date));
@@ -157,7 +157,7 @@ frappe.ui.form.ControlDate = class CustomControlDate extends frappe.ui.form.Cont
     }
     ad2bs(m, type, dateFormat = BS_DATE_FORMAT){
         if (!m) { return null; }
-        if(m.year() > 2090){
+        if(m.year() > 2033 || m.year() < 1944){
             return false;
         }
         return this.ad2bs_date(m, type);
@@ -187,7 +187,7 @@ frappe.ui.form.ControlDate = class CustomControlDate extends frappe.ui.form.Cont
         } else {
             adDate = selectedDate.toDate();
         }
-        if(selectedDate.year() > 2090){
+        if(selectedDate.year() > 2033 || selectedDate.year() < 1944){
             return;
         }else{
             let naplidate = new NepaliDate(adDate);
@@ -334,7 +334,7 @@ frappe.ui.form.ControlDatetime = class CustomControlDateDate extends frappe.ui.f
     }
     ad2bs(m, type, dateFormat = BS_DATE_FORMAT){
         if (!m) { return null; }
-        if(m.year() > 2090){
+        if(m.year() > 2033 || m.year() < 1944){
             return false;
         }
         return this.ad2bs_date(m, type);
@@ -364,7 +364,7 @@ frappe.ui.form.ControlDatetime = class CustomControlDateDate extends frappe.ui.f
         } else {
             adDate = selectedDate.toDate();
         }
-        if(selectedDate.year() > 2090){
+        if(selectedDate.year() > 2033 || selectedDate.year() < 1944){
             return;
         }else{
             let naplidate = new NepaliDate(adDate);
@@ -418,7 +418,7 @@ frappe.ui.form.ControlDatetime = class CustomControlDateDate extends frappe.ui.f
 
         if (!formatted) { return formatted; }
         const date = frappe.datetime.str_to_obj(value);
-        if(moment(date).year() > 2090){
+        if(moment(date).year() > 2033 || moment(date).year() < 1944){
             return formatted;
         }
         let naplidate = new NepaliDate(new Date(date));
@@ -433,7 +433,7 @@ frappe.ui.form.ControlDatetime = class CustomControlDateDate extends frappe.ui.f
         if (!formatted) { return formatted; }
 
         const date = frappe.datetime.str_to_obj(value);
-        if(moment(date).year() > 2090){
+        if(moment(date).year() > 2033 || moment(date).year() < 1944){
             return formatted;
         }
         let naplidate = new NepaliDate(new Date(date));

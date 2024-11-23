@@ -5568,7 +5568,7 @@
       return formatted;
     }
     const date = frappe.datetime.str_to_obj(value);
-    if (moment(date).year() > 2090) {
+    if (moment(date).year() > 2033 || moment(date).year() < 1944) {
       return formatted;
     }
     let naplidate = new nepali_date_converter_es5_default(new Date(date));
@@ -5582,7 +5582,7 @@
       return formatted;
     }
     const date = frappe.datetime.str_to_obj(value);
-    if (moment(date).year() > 2090) {
+    if (moment(date).year() > 2033 || moment(date).year() < 1944) {
       return formatted;
     }
     let naplidate = new nepali_date_converter_es5_default(new Date(date));
@@ -5699,7 +5699,7 @@
       if (!m) {
         return null;
       }
-      if (m.year() > 2090) {
+      if (m.year() > 2033 || m.year() < 1944) {
         return false;
       }
       return this.ad2bs_date(m, type);
@@ -5728,7 +5728,7 @@
       } else {
         adDate = selectedDate.toDate();
       }
-      if (selectedDate.year() > 2090) {
+      if (selectedDate.year() > 2033 || selectedDate.year() < 1944) {
         return;
       } else {
         let naplidate = new nepali_date_converter_es5_default(adDate);
@@ -5870,7 +5870,7 @@
       if (!m) {
         return null;
       }
-      if (m.year() > 2090) {
+      if (m.year() > 2033 || m.year() < 1944) {
         return false;
       }
       return this.ad2bs_date(m, type);
@@ -5899,7 +5899,7 @@
       } else {
         adDate = selectedDate.toDate();
       }
-      if (selectedDate.year() > 2090) {
+      if (selectedDate.year() > 2033 || selectedDate.year() < 1944) {
         return;
       } else {
         let naplidate = new nepali_date_converter_es5_default(adDate);
@@ -5948,7 +5948,7 @@
       return formatted;
     }
     const date = frappe.datetime.str_to_obj(value);
-    if (moment(date).year() > 2090) {
+    if (moment(date).year() > 2033 || moment(date).year() < 1944) {
       return formatted;
     }
     let naplidate = new nepali_date_converter_es5_default(new Date(date));
@@ -5962,7 +5962,7 @@
       return formatted;
     }
     const date = frappe.datetime.str_to_obj(value);
-    if (moment(date).year() > 2090) {
+    if (moment(date).year() > 2033 || moment(date).year() < 1944) {
       return formatted;
     }
     let naplidate = new nepali_date_converter_es5_default(new Date(date));
@@ -6102,4 +6102,4 @@ See the Apache Version 2.0 License for specific language governing permissions
 and limitations under the License.
 ***************************************************************************** */
 /*! Sortable 1.15.0 - MIT | git://github.com/SortableJS/Sortable.git */
-//# sourceMappingURL=nepali_assets.bundle.CSQIFF4S.js.map
+//# sourceMappingURL=nepali_assets.bundle.RGJUHY6Q.js.map
