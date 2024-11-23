@@ -5547,17 +5547,6 @@
   var TYPE_DATETIME = "datetime";
   var BS_DATE_FORMAT = frappe.boot["nepali_date_datepicker_format"] || "mm-dd-yyyy";
   var BS_DATE_FORMAT_USER = frappe.boot["nepali_date_format"] || "MMM dd, yyyy";
-  var NPFORMATE_VALUES = {
-    "mm-dd-yyyy": "%m-%d-%y",
-    "mm.dd.yyyy": "%m.%d.%y",
-    "mm/dd/yyyy": "%m/%d/%y",
-    "dd-mm-yyyy": "%d-%m-%y",
-    "dd.mm.yyyy": "%d.%m.%y",
-    "dd/mm/yyyy": "%d/%m/%y",
-    "yyyy-mm-dd": "%y-%m-%d",
-    "yyyy/mm/dd": "%y/%m/%d",
-    "yyyy.mm.dd": "%y.%m.%d"
-  };
   var datetime_str_to_user = frappe.datetime.str_to_user;
   var frappeDateFormatter = frappe.form.formatters.Date;
   var frappeDatetimeFormatter = frappe.form.formatters.Datetime;
@@ -5610,10 +5599,9 @@
         console.log("Your jQuery function is defined");
       }
       $(this.$npInput).nepaliDatePicker({
-        dateFormat: NPFORMATE_VALUES[BS_DATE_FORMAT],
-        ndpYear: true,
-        ndpMonth: true,
-        ndpYearCount: 10,
+        dateFormat: "%D, %M %d, %y",
+        yearStart: 2e3,
+        yearEnd: 2090,
         closeOnDateSelect: true
       });
       var self2 = this;
@@ -5789,10 +5777,9 @@
         console.log("Your jQuery function is defined");
       }
       $(this.$npInput).nepaliDatePicker({
-        dateFormat: NPFORMATE_VALUES[BS_DATE_FORMAT],
-        ndpYear: true,
-        ndpMonth: true,
-        ndpYearCount: 10,
+        dateFormat: "%D, %M %d, %y",
+        yearStart: 2e3,
+        yearEnd: 2090,
         closeOnDateSelect: true
       });
       var self2 = this;
@@ -6102,4 +6089,4 @@ See the Apache Version 2.0 License for specific language governing permissions
 and limitations under the License.
 ***************************************************************************** */
 /*! Sortable 1.15.0 - MIT | git://github.com/SortableJS/Sortable.git */
-//# sourceMappingURL=nepali_assets.bundle.RGJUHY6Q.js.map
+//# sourceMappingURL=nepali_assets.bundle.DF5IN6RW.js.map
