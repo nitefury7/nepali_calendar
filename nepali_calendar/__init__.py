@@ -21,7 +21,7 @@ NPFORMATE_VALUES = {
 }
 
 def custom_format_value(value, df=None, doc=None, currency=None, translated=False, format=None):
-    if df and  df.get("fieldtype") == "Date":
+    if df and (df is str) and df.get("fieldtype") == "Date":
         if isinstance(value, datetime.date):
             value = str(value)
         neplai_date_format = frappe.db.get_single_value("Nepali Date Settings", "nepali_date_format")
