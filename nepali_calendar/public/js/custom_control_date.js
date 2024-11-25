@@ -49,7 +49,7 @@ function FormatFormDatetime(value) {
 }
 frappe.ui.form.ControlDate = class CustomControlDate extends frappe.ui.form.ControlDate {
     make_input() {
-        this.datepicker_bs = true;
+        this.datepicker_bs = false;
         super.make_input();
         this.$npInput = this.$input.clone();
         this.$npInput.addClass('hide');
