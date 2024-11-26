@@ -30,3 +30,15 @@
     content: "\00a0";
     padding-right: 5px;
 }
+
+.nepali-date-picker .prev-btn.icon{
+    background-position: -20px center;
+}
+
+.nepali-date-picker .today-btn.icon{
+    background-position: -70px center;
+}
+
+.nepali-date-picker .calendar-controller i.icon-drop-down {
+  background-position: -45px center;
+}
